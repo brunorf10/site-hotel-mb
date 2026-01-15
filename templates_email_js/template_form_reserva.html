@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #222222;
+        margin: 0;
+        padding: 0;
+        background-color: #fdfcfb;
+      }
+      .container {
+        max-width: 600px;
+        margin: 20px auto;
+        background: #ffffff;
+        border: 1px solid #eeeeee;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      }
+      .header {
+        background-color: #5c3216;
+        color: #ffffff;
+        padding: 40px 20px;
+        text-align: center;
+      }
+      .header h1 {
+        margin: 0;
+        font-family: "Times New Roman", serif;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-size: 24px;
+      }
+      .content {
+        padding: 30px;
+      }
+      .section-title {
+        color: #bfa15a;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 1px;
+        border-bottom: 1px solid #f0f0f0;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+        margin-top: 25px;
+      }
+      .data-row {
+        margin-bottom: 10px;
+        display: flex;
+        border-bottom: 1px solid #fafafa;
+        padding-bottom: 8px;
+      }
+      .label {
+        font-weight: bold;
+        width: 120px;
+        color: #666666;
+        font-size: 13px;
+      }
+      .value {
+        flex: 1;
+        font-size: 14px;
+      }
+      .footer {
+        background-color: #f9f9f9;
+        padding: 20px;
+        text-align: center;
+        font-size: 12px;
+        color: #999999;
+      }
+      .btn {
+        display: inline-block;
+        padding: 12px 25px;
+        background-color: #bfa15a;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Hotel Maria Bastos</h1>
+        <p style="margin-top: 10px; opacity: 0.8">Solicitação de Reserva</p>
+      </div>
+      <div class="content">
+        <p>Olá, uma nova solicitação foi recebida através do site.</p>
+
+        <div class="section-title">Dados do Cliente</div>
+        <div class="data-row">
+          <div class="label">Nome:</div>
+          <div class="value">{{from_name}}</div>
+        </div>
+        <div class="data-row">
+          <div class="label">E-mail:</div>
+          <div class="value">{{from_email}}</div>
+        </div>
+        <div class="data-row">
+          <div class="label">Telefone:</div>
+          <div class="value">{{phone}}</div>
+        </div>
+        <div class="section-title">Detalhes da Estadia</div>
+        <div class="data-row">
+          <div class="label">Acomodação:</div>
+          <div class="value"><strong>{{accommodation}}</strong></div>
+        </div>
+        <div class="data-row">
+          <div class="label">Check-in:</div>
+          <div class="value">{{check_in}}</div>
+        </div>
+        <div class="data-row">
+          <div class="label">Check-out:</div>
+          <div class="value">{{check_out}}</div>
+        </div>
+        <div class="data-row">
+          <div class="label">Adultos:</div>
+          <div class="value">{{adults}}</div>
+        </div>
+        <div class="data-row">
+          <div class="label">Crianças:</div>
+          <div class="value">{{children}}</div>
+        </div>
+
+        <div class="section-title">Observações</div>
+        <div
+          style="
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-style: italic;
+          "
+        >
+          {{notes}}
+        </div>
+        <div style="text-align: center">
+          <a href="mailto:{{from_email}}" class="btn">Responder por E-mail</a>
+        </div>
+      </div>
+      <div class="footer">
+        Este é um e-mail automático enviado pelo site mariabastos.com.br
+      </div>
+    </div>
+  </body>
+</html>

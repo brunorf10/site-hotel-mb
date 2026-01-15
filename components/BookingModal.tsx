@@ -18,6 +18,8 @@ interface BookingFormData {
   checkOut: string;
   accommodation: string;
   notes: string;
+  adults: string;
+  children: string;
   acceptedPrivacy: boolean;
 }
 
@@ -27,6 +29,8 @@ interface BookingErrors {
   phone?: string;
   checkIn?: string;
   checkOut?: string;
+  adults?: string;
+  children?: string;
 }
 
 export const BookingModal: React.FC<BookingModalProps> = ({
@@ -44,6 +48,8 @@ export const BookingModal: React.FC<BookingModalProps> = ({
     checkOut: "",
     accommodation: "Suíte Presidencial",
     notes: "",
+    adults: "1",
+    children: "0",
     acceptedPrivacy: false,
   });
 
@@ -160,6 +166,8 @@ export const BookingModal: React.FC<BookingModalProps> = ({
           Acomodação: ${formData.accommodation}
           Check-in: ${formData.checkIn}
           Check-out: ${formData.checkOut}
+          Adultos: ${formData.adults}
+          Crianças: ${formData.children}
           
           Observações/Pedidos:
           --------------------
@@ -170,6 +178,8 @@ export const BookingModal: React.FC<BookingModalProps> = ({
         check_in: formData.checkIn,
         check_out: formData.checkOut,
         accommodation: formData.accommodation,
+        adults: formData.adults,
+        children: formData.children,
         notes: formData.notes,
       });
       setStep("success");
@@ -202,6 +212,8 @@ export const BookingModal: React.FC<BookingModalProps> = ({
         checkOut: "",
         accommodation: "Suíte Presidencial",
         notes: "",
+        adults: "1",
+        children: "0",
         acceptedPrivacy: false,
       });
       setErrors({});
@@ -394,6 +406,43 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                           <option>Quarto Deluxe</option>
                           <option>Evento / Corporativo</option>
                         </select>
+                      </div>
+
+                      <div className="grid grid-cols-2 gap-4">
+                        <div className="space-y-2">
+                          <label className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">
+                            Adultos
+                          </label>
+                          <select
+                            name="adults"
+                            value={formData.adults}
+                            onChange={handleChange}
+                            className="w-full bg-gray-50 border border-gray-100 rounded-xl px-4 py-2.5 outline-none focus:ring-2 focus:ring-primary/20 transition-all appearance-none cursor-pointer"
+                          >
+                            <option value="1">1 Adulto</option>
+                            <option value="2">2 Adultos</option>
+                            <option value="3">3 Adultos</option>
+                            <option value="4">4 Adultos</option>
+                            <option value="5+">5+ Adultos</option>
+                          </select>
+                        </div>
+                        <div className="space-y-2">
+                          <label className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">
+                            Crianças
+                          </label>
+                          <select
+                            name="children"
+                            value={formData.children}
+                            onChange={handleChange}
+                            className="w-full bg-gray-50 border border-gray-100 rounded-xl px-4 py-2.5 outline-none focus:ring-2 focus:ring-primary/20 transition-all appearance-none cursor-pointer"
+                          >
+                            <option value="0">Nenhuma</option>
+                            <option value="1">1 Criança</option>
+                            <option value="2">2 Crianças</option>
+                            <option value="3">3 Crianças</option>
+                            <option value="4+">4+ Crianças</option>
+                          </select>
+                        </div>
                       </div>
 
                       <div className="space-y-2">
