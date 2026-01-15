@@ -1,0 +1,7 @@
+{
+  "name": "Hotel Maria Bastos - Experiência de Luxo",
+  "description": "Um site premium para o Hotel Maria Bastos, apresentando acomodações, gastronomia, eventos e contato, com um design moderno e elegante em Português (Brasil).",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
