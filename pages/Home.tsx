@@ -32,27 +32,27 @@ export const Home: React.FC<HomeProps> = ({ onOpenBooking }) => {
       <Hero />
 
       {/* Seção Galeria - Fundo Branco Puro */}
-      <section id="galeria" className="py-24 bg-white">
+      <section id="galeria" className="py-10 md:py-16 bg-white">
         <Gallery />
       </section>
 
       {/* Seção Acomodações - Fundo Cinza Pedra Suave para contraste */}
       <section
         id="acomodacoes"
-        className="py-24 bg-stone-50 border-y border-stone-100"
+        className="py-10 md:py-16 bg-stone-50 border-y border-stone-100"
       >
         <RoomsSection onOpenBooking={onOpenBooking} />
       </section>
 
       {/* Seção Eventos - Fundo Branco Puro */}
-      <section id="eventos" className="py-24 bg-white">
+      <section id="eventos" className="py-10 md:py-16 bg-white">
         <EventsSection onOpenBooking={onOpenBooking} />
       </section>
 
       {/* Seção Contato - Fundo Bege Palha Suave para delimitar o final */}
       <section
         id="contato"
-        className="py-24 bg-[#FAF9F6] border-t border-stone-100"
+        className="py-10 md:py-16 bg-[#FAF9F6] border-t border-stone-100"
       >
         <ContactSection />
       </section>
