@@ -59,7 +59,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
   const validate = (
     name: string,
     value: string,
-    currentData: BookingFormData
+    currentData: BookingFormData,
   ) => {
     return validateField(name, value, currentData.checkIn);
   };
@@ -67,7 +67,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
-    >
+    >,
   ) => {
     const { name, value } = e.target;
     let finalValue = value;
@@ -100,7 +100,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
         const checkOutError = validate(
           "checkOut",
           updatedData.checkOut,
-          updatedData
+          updatedData,
         );
         setErrors((prev) => ({ ...prev, checkOut: checkOutError }));
       }
@@ -110,7 +110,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
   const handleBlur = (
     e: React.FocusEvent<
       HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
-    >
+    >,
   ) => {
     const { name, value } = e.target;
     setTouched((prev) => ({ ...prev, [name]: true }));
@@ -137,8 +137,8 @@ export const BookingModal: React.FC<BookingModalProps> = ({
       setTouched(
         Object.keys(formData).reduce(
           (acc, key) => ({ ...acc, [key]: true }),
-          {}
-        )
+          {},
+        ),
       );
       toast.error("Por favor, corrija os erros no formulário antes de enviar.");
       return;
@@ -186,7 +186,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
     } catch (error: any) {
       console.error("Erro ao enviar reserva:", error);
       toast.error(
-        "Erro ao enviar solicitação. Tente novamente ou entre em contato por telefone."
+        "Erro ao enviar solicitação. Tente novamente ou entre em contato por telefone.",
       );
     } finally {
       setIsSubmitting(false);
@@ -377,6 +377,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                             onChange={handleChange}
                             onBlur={handleBlur}
                             type="date"
+                            min={formData.checkIn || undefined}
                             className={`w-full bg-gray-50 border-2 rounded-xl px-4 py-2.5 outline-none transition-all ${
                               touched.checkOut && errors.checkOut
                                 ? "border-red-100 focus:border-red-300"
