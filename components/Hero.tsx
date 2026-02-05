@@ -19,7 +19,7 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <section className="relative h-[70vh] md:h-[85vh] w-full flex items-center justify-center overflow-hidden">
+    <section className="relative h-[calc(100dvh-72px)] md:h-[85vh] w-full flex items-center justify-center overflow-hidden">
       {/* Background com imagem de um lobby moderno e sofisticado com pé direito alto */}
       <div className="absolute inset-0 z-0">
         <img
@@ -30,12 +30,12 @@ export const Hero: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80" />
       </div>
 
-      <div className="relative z-10 text-center text-white px-6 max-w-4xl">
+      <div className="relative z-10 text-center text-white px-6 py-4 md:py-0 max-w-4xl flex flex-col items-center">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-accent uppercase tracking-[0.3em] font-bold text-sm mb-6"
+          className="text-accent uppercase tracking-[0.3em] font-bold text-xs md:text-sm mb-2 md:mb-6"
         >
           BEM-VINDO AO HOTEL MARIA BASTOS
         </motion.p>
@@ -43,7 +43,7 @@ export const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-5xl md:text-7xl font-serif mb-8 leading-tight"
+          className="text-5xl md:text-7xl font-serif mb-4 md:mb-8 leading-tight"
         >
           Onde o Luxo Encontra a{" "}
           <span className="italic">Tranquilidade do Sertão</span>
@@ -52,33 +52,37 @@ export const Hero: React.FC = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4"
         >
           <button
             onClick={() => scrollToSection("acomodacoes")}
-            className="w-full sm:w-auto bg-accent text-primary px-10 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-primary transition-all shadow-xl active:scale-95"
+            className="w-full sm:w-auto bg-accent text-primary px-8 md:px-10 py-3 md:py-4 rounded-full font-bold text-base md:text-lg hover:bg-white hover:text-primary transition-all shadow-xl active:scale-95"
           >
             Explorar Quartos
           </button>
           <button
             onClick={() => scrollToSection("galeria")}
-            className="w-full sm:w-auto bg-white/10 backdrop-blur-md border border-white/30 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all active:scale-95"
+            className="w-full sm:w-auto bg-white/10 backdrop-blur-md border border-white/30 text-white px-8 md:px-10 py-3 md:py-4 rounded-full font-bold text-base md:text-lg hover:bg-white/20 transition-all active:scale-95"
           >
             Ver Experiências
           </button>
         </motion.div>
-      </div>
 
-      <div
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce opacity-70 cursor-pointer"
-        onClick={() => scrollToSection("galeria")}
-      >
-        <span className="text-white text-xs uppercase tracking-widest">
-          Descubra mais
-        </span>
-        <span className="material-symbols-outlined text-white">
-          keyboard_double_arrow_down
-        </span>
+        {/* Descubra mais - posicionado após os botões */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.7 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mt-4 md:mt-12 flex flex-col items-center gap-1 animate-bounce cursor-pointer"
+          onClick={() => scrollToSection("galeria")}
+        >
+          <span className="text-white text-xs uppercase tracking-widest">
+            Descubra mais
+          </span>
+          <span className="material-symbols-outlined text-white">
+            keyboard_double_arrow_down
+          </span>
+        </motion.div>
       </div>
     </section>
   );
