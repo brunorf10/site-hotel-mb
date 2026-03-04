@@ -24,10 +24,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
   };
 
   return (
-    <footer className="bg-primary text-white pt-20 pb-10">
+    <footer className="bg-primary text-white pt-12 md:pt-20 pb-8 md:pb-10">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
-          <div className="col-span-1 md:col-span-1 space-y-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12 md:mb-20">
+          <div className="col-span-2 md:col-span-1 space-y-6">
             <div
               className="flex items-center cursor-pointer group"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}

@@ -37,7 +37,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-gray-100">
-      <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="container mx-auto px-4 py-3 md:px-6 md:py-4 flex items-center justify-between">
         <Link
           to="/"
           className="flex items-center cursor-pointer group"
@@ -52,7 +52,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
             <span className="text-[10px] font-black text-primary uppercase tracking-[0.4em] opacity-80 mb-0.5">
               Hotel
             </span>
-            <h1 className="text-2xl font-bold font-serif tracking-tight text-primary transition-colors group-hover:text-accent">
+            <h1 className="text-xl md:text-2xl font-bold font-serif tracking-tight text-primary transition-colors group-hover:text-accent">
               MARIA BASTOS
             </h1>
           </div>

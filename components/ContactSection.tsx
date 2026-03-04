@@ -152,7 +152,7 @@ export const ContactSection: React.FC = () => {
       className="container mx-auto px-6"
     >
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-6xl font-serif font-bold text-primary mb-4">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-serif font-bold text-primary mb-4">
           Localização & Contato
         </h2>
         <p className="text-gray-600 max-w-2xl mx-auto">
@@ -162,13 +162,13 @@ export const ContactSection: React.FC = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:items-stretch">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 lg:items-stretch">
         <div className="space-y-10">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="rounded-3xl overflow-hidden h-[450px] shadow-2xl border border-gray-100 relative group"
+            className="rounded-2xl md:rounded-3xl overflow-hidden h-[280px] sm:h-[350px] lg:h-[450px] shadow-2xl border border-gray-100 relative group"
           >
             <iframe
               src={mapUrl}
@@ -233,7 +233,7 @@ export const ContactSection: React.FC = () => {
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-2xl shadow-primary/5 border border-gray-100 lg:h-full flex flex-col"
+          className="bg-white p-6 sm:p-8 md:p-12 rounded-2xl md:rounded-[2.5rem] shadow-2xl shadow-primary/5 border border-gray-100 lg:h-full flex flex-col"
         >
           <h3 className="text-2xl font-bold text-primary mb-8">
             Envie-nos uma Mensagem

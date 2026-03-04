@@ -239,7 +239,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
             className="fixed inset-0 z-[70] flex items-center justify-center p-4 pointer-events-none"
           >
-            <div className="bg-white w-full max-w-xl rounded-[2.5rem] shadow-2xl overflow-hidden pointer-events-auto relative max-h-[90vh] overflow-y-auto no-scrollbar">
+            <div className="bg-white w-full max-w-xl rounded-2xl md:rounded-[2.5rem] shadow-2xl overflow-hidden pointer-events-auto relative max-h-[90vh] overflow-y-auto no-scrollbar">
               <button
                 onClick={handleClose}
                 aria-label="Fechar modal de reserva"
@@ -250,11 +250,11 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                 </span>
               </button>
 
-              <div className="p-7 md:p-10">
+              <div className="p-5 sm:p-7 md:p-10">
                 {step === "form" ? (
                   <>
                     <div className="text-center mb-6">
-                      <h2 className="text-3xl font-serif font-bold text-primary mb-2">
+                      <h2 className="text-2xl sm:text-3xl font-serif font-bold text-primary mb-2">
                         Interesse em Reserva
                       </h2>
                       <p className="text-gray-500 text-sm">

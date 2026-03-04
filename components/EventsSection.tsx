@@ -15,7 +15,7 @@ export const EventsSection: React.FC<EventsSectionProps> = ({ onOpenBooking }) =
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="container mx-auto px-6"
     >
-      <div className="relative rounded-3xl overflow-hidden min-h-[500px] flex items-center justify-center text-center p-8 mb-20 shadow-2xl">
+      <div className="relative rounded-2xl md:rounded-3xl overflow-hidden min-h-[300px] sm:min-h-[400px] md:min-h-[500px] flex items-center justify-center text-center p-6 md:p-8 mb-10 md:mb-20 shadow-2xl">
         <img 
           src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=2069" 
           alt="Salão de eventos luxuoso" 
@@ -26,7 +26,7 @@ export const EventsSection: React.FC<EventsSectionProps> = ({ onOpenBooking }) =
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-4xl md:text-6xl font-serif text-white mb-6"
+            className="text-3xl sm:text-4xl md:text-6xl font-serif text-white mb-4 md:mb-6"
           >
             Eventos de Excelência
           </motion.h2>
@@ -34,7 +34,7 @@ export const EventsSection: React.FC<EventsSectionProps> = ({ onOpenBooking }) =
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.6 }}
-            className="text-lg text-gray-200 mb-10 leading-relaxed"
+            className="text-sm sm:text-base md:text-lg text-gray-200 mb-6 md:mb-10 leading-relaxed"
           >
             Instalações de última geração e serviços personalizados para reuniões corporativas, conferências e celebrações inesquecíveis.
           </motion.p>
@@ -42,7 +42,7 @@ export const EventsSection: React.FC<EventsSectionProps> = ({ onOpenBooking }) =
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={onOpenBooking}
-            className="bg-accent text-primary px-10 py-4 rounded-full font-bold text-lg hover:bg-white transition-all shadow-xl"
+            className="bg-accent text-primary px-6 sm:px-10 py-3 sm:py-4 rounded-full font-bold text-sm sm:text-lg hover:bg-white transition-all shadow-xl"
           >
             Solicite uma Proposta
           </motion.button>
@@ -75,7 +75,7 @@ export const EventsSection: React.FC<EventsSectionProps> = ({ onOpenBooking }) =
             viewport={{ once: true }}
             whileHover={{ y: -10 }}
             onClick={onOpenBooking}
-            className="group relative h-96 rounded-2xl overflow-hidden cursor-pointer shadow-lg"
+            className="group relative h-56 sm:h-72 md:h-96 rounded-2xl overflow-hidden cursor-pointer shadow-lg"
           >
             <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent opacity-80" />
@@ -87,7 +87,7 @@ export const EventsSection: React.FC<EventsSectionProps> = ({ onOpenBooking }) =
         ))}
       </div>
       
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-20 pt-10 border-t border-gray-200">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mt-12 md:mt-20 pt-8 md:pt-10 border-t border-gray-200">
         {[
           { icon: 'wifi', label: 'Wi-Fi de Alta Velocidade', desc: 'Conectividade garantida em todo o hotel.' },
           { icon: 'videocam', label: 'Sistema Audiovisual', desc: 'Tecnologia de ponta para apresentações.' },

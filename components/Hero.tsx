@@ -43,7 +43,7 @@ export const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-5xl md:text-7xl font-serif mb-4 md:mb-8 leading-tight"
+          className="text-3xl sm:text-5xl md:text-7xl font-serif mb-4 md:mb-8 leading-tight"
         >
           Onde o Luxo Encontra a{" "}
           <span className="italic">Tranquilidade do Sertão</span>
@@ -56,13 +56,13 @@ export const Hero: React.FC = () => {
         >
           <button
             onClick={() => scrollToSection("acomodacoes")}
-            className="w-full sm:w-auto bg-accent text-primary px-8 md:px-10 py-3 md:py-4 rounded-full font-bold text-base md:text-lg hover:bg-white hover:text-primary transition-all shadow-xl active:scale-95"
+            className="w-full sm:w-auto bg-accent text-primary px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 md:py-4 rounded-full font-bold text-sm sm:text-base md:text-lg hover:bg-white hover:text-primary transition-all shadow-xl active:scale-95"
           >
             Explorar Quartos
           </button>
           <button
             onClick={() => scrollToSection("galeria")}
-            className="w-full sm:w-auto bg-white/10 backdrop-blur-md border border-white/30 text-white px-8 md:px-10 py-3 md:py-4 rounded-full font-bold text-base md:text-lg hover:bg-white/20 transition-all active:scale-95"
+            className="w-full sm:w-auto bg-white/10 backdrop-blur-md border border-white/30 text-white px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 md:py-4 rounded-full font-bold text-sm sm:text-base md:text-lg hover:bg-white/20 transition-all active:scale-95"
           >
             Ver Experiências
           </button>

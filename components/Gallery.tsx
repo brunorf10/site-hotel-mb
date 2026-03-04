@@ -81,19 +81,19 @@ export const Gallery: React.FC = () => {
       className="container mx-auto px-6"
     >
       <div className="text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-4">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-primary mb-4">
           Descubra Nossos Espaços
         </h2>
         <div className="w-24 h-1 bg-accent mx-auto" />
       </div>
 
       {/* Filter Tabs */}
-      <div className="flex justify-center flex-wrap gap-2 mb-12 no-scrollbar overflow-x-auto pb-4">
+      <div className="flex justify-start sm:justify-center gap-2 mb-8 md:mb-12 no-scrollbar overflow-x-auto pb-4 -mx-6 px-6">
         {Object.values(Category).map((cat) => (
           <button
             key={cat}
             onClick={() => handleCategoryChange(cat)}
-            className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all border ${
+            className={`px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all border whitespace-nowrap ${
               activeCategory === cat
                 ? "bg-primary text-white border-primary shadow-lg shadow-primary/20"
                 : "bg-white text-gray-600 border-gray-200 hover:border-primary hover:text-primary"

@@ -36,7 +36,7 @@ export const RoomsSection: React.FC<RoomsSectionProps> = ({
       className="container mx-auto px-6"
     >
       <div className="flex flex-col gap-4 mb-12">
-        <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-primary">
           Nossos Quartos & Suítes
         </h2>
         <p className="text-gray-600 max-w-2xl">
@@ -47,12 +47,12 @@ export const RoomsSection: React.FC<RoomsSectionProps> = ({
       </div>
 
       {/* Categories */}
-      <div className="flex gap-4 mb-12 no-scrollbar overflow-x-auto pb-4">
+      <div className="flex gap-2 sm:gap-4 mb-8 md:mb-12 no-scrollbar overflow-x-auto pb-4 -mx-6 px-6">
         {ROOMS.map((room) => (
           <button
             key={room.id}
             onClick={() => setSelectedRoom(room)}
-            className={`px-8 py-3 rounded-full text-sm font-bold transition-all whitespace-nowrap ${
+            className={`px-5 sm:px-8 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-bold transition-all whitespace-nowrap ${
               selectedRoom.id === room.id
                 ? "bg-primary text-white shadow-xl"
                 : "bg-gray-100 text-gray-500 hover:bg-gray-200"
@@ -63,7 +63,7 @@ export const RoomsSection: React.FC<RoomsSectionProps> = ({
         ))}
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-12 items-start">
         <div className="lg:col-span-2 space-y-6">
           <AnimatePresence mode="wait">
             <motion.div
@@ -83,7 +83,7 @@ export const RoomsSection: React.FC<RoomsSectionProps> = ({
             </motion.div>
           </AnimatePresence>
 
-          <div className="grid grid-cols-4 gap-4">
+          <div className="grid grid-cols-4 gap-2 sm:gap-4">
             {roomImages.map((img, i) => (
               <div
                 key={i}
