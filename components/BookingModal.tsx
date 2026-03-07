@@ -46,7 +46,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
     phone: "",
     checkIn: "",
     checkOut: "",
-    accommodation: "Suíte Presidencial",
+    accommodation: "Apt. Simples",
     notes: "",
     adults: "1",
     children: "0",
@@ -210,7 +210,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
         phone: "",
         checkIn: "",
         checkOut: "",
-        accommodation: "Suíte Presidencial",
+        accommodation: "Apt. Simples",
         notes: "",
         adults: "1",
         children: "0",
@@ -402,10 +402,20 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                           onChange={handleChange}
                           className="w-full bg-gray-50 border border-gray-100 rounded-xl px-4 py-2.5 outline-none focus:ring-2 focus:ring-primary/20 transition-all appearance-none cursor-pointer"
                         >
-                          <option>Suíte Presidencial</option>
-                          <option>Suíte Júnior</option>
-                          <option>Quarto Deluxe</option>
-                          <option>Evento / Corporativo</option>
+                          <optgroup label="Apartamentos">
+                            <option>Apt. Simples</option>
+                            <option>Apt. Duplo</option>
+                            <option>Apt. Casal</option>
+                            <option>Apt. Triplo</option>
+                            <option>Apt. Master</option>
+                            <option>Apt. Master Luxo</option>
+                            <option>Apt. Acessibilidade</option>
+                          </optgroup>
+                          <optgroup label="Espaços para Eventos">
+                            <option>Auditório (170 pessoas)</option>
+                            <option>Sala de Reuniões (20 pessoas)</option>
+                            <option>Salão de Eventos (Restaurante)</option>
+                          </optgroup>
                         </select>
                       </div>
 

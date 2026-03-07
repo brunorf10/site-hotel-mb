@@ -197,13 +197,18 @@ export const ContactSection: React.FC = () => {
               {
                 icon: "location_on",
                 title: "Endereço",
-                text: "Rua Solon Medeiros, 365, Alto Brilhante, Tauá - CE",
+                text: "Rua Solon Medeiros, 365 – Alto Brilhante – Tauá-CE",
               },
-              { icon: "call", title: "Telefone", text: "+55 (88) 3437-1234" },
+              { icon: "call", title: "Telefone", text: "(88) 3437-4001" },
+              {
+                icon: "chat",
+                title: "WhatsApp",
+                text: "(88) 9637-2226",
+              },
               {
                 icon: "mail",
                 title: "Email",
-                text: "contato@mariabastos.com.br",
+                text: "contato@hotelmariabastos.com.br",
               },
             ].map((info, i) => (
               <motion.div

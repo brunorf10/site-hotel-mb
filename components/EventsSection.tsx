@@ -15,9 +15,9 @@ export const EventsSection: React.FC<EventsSectionProps> = ({ onOpenBooking }) =
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="container mx-auto px-6"
     >
-      <div className="relative rounded-2xl md:rounded-3xl overflow-hidden min-h-[300px] sm:min-h-[400px] md:min-h-[500px] flex items-center justify-center text-center p-6 md:p-8 mb-10 md:mb-20 shadow-2xl">
+      <div className="relative rounded-2xl md:rounded-3xl overflow-hidden min-h-[300px] sm:min-h-[400px] md:min-h-[500px] flex items-start justify-center text-center p-6 pt-10 md:p-8 md:pt-16 mb-10 md:mb-20 shadow-2xl">
         <img 
-          src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=2069" 
+          src="/images/optimized/eventos/banner-eventos-lg.webp" 
           alt="Salão de eventos luxuoso" 
           className="absolute inset-0 w-full h-full object-cover brightness-[0.4]"
         />
@@ -36,7 +36,7 @@ export const EventsSection: React.FC<EventsSectionProps> = ({ onOpenBooking }) =
             transition={{ delay: 0.5, duration: 0.6 }}
             className="text-sm sm:text-base md:text-lg text-gray-200 mb-6 md:mb-10 leading-relaxed"
           >
-            Instalações de última geração e serviços personalizados para reuniões corporativas, conferências e celebrações inesquecíveis.
+            Instalações climatizadas e serviços personalizados para reuniões corporativas, conferências e celebrações inesquecíveis.
           </motion.p>
           <motion.button 
             whileHover={{ scale: 1.05 }}
@@ -52,19 +52,22 @@ export const EventsSection: React.FC<EventsSectionProps> = ({ onOpenBooking }) =
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {[
           {
-            title: "Auditório Principal",
-            cap: "200 pessoas",
-            img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDvJ7MauZm3VIjU-NSUx03ArTnRoDAxF9LD3xg1lvNH92jF-agHCR6Ig5I3q4zRi6xeHF-frRRtxdYQAAWDz0k4RqDGbu0HFrcZzPWiYr4jTFs5tW2BrxPbkQuYqX24REEcbHEPXsamPfJm-fb_63IDFoXxGehEkE4jz5czakKUBjLmOUHdSKHGskAR5SaDUA1x9iM4YVNCpMCGohuWkrSRyXJaLj_7ZP5BxUx21HR899yQZSWpFDUvfNPnrY246GOCxObf-bKEm_TV"
+            title: "Auditório",
+            cap: "170 pessoas",
+            desc: "Climatizado, serviço de som e imagem, toaletes masculino e feminino",
+            img: "/images/optimized/eventos/auditorio-01-lg.webp"
           },
           {
-            title: "Sala Executiva",
+            title: "Sala de Reuniões",
             cap: "20 pessoas",
-            img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDrdAT4N-KgRNWq47FlX5iD7fFE5Q-eBYCu1RFA70eMHx6AlFcPXvKk-os3B5jgDSV1gQ_yviVfRr-8awdhJLnNizSWEphJm3KVkCzeIOSEKBwo7lPyiY0VOLut_sx_K448j5vH5VnZesrkXg5thRFwVohQGBwt9QcMJ894rkKo4NiofxmPi44eT4EvJTS8dyOeh6VhP7cVS5GEB_9IZgitQcG46B5k7lLGYvQgeDOvKW2LIbhfAqwLLK3cAd0sTeBYEd2LvF1condO"
+            desc: "Climatizada, móveis projetados, serviço de som e imagem",
+            img: "/images/optimized/eventos/sala-reunioes-01-lg.webp"
           },
           {
-            title: "Salão de Festas",
-            cap: "150 pessoas",
-            img: "https://lh3.googleusercontent.com/aida-public/AB6AXuC3SI-Q1KE3ZpZB7DpXjYdMEL5ZIWvFrFInlsCRbWVeQhvGL3bfDWAIRleUY7FPiNi4yKxPkysKpDpCIGIx3qJiaTDeYbu1IB1YZMFbP5tm6QFSE7NeeTqyLoZvlaStGTGuPL_4qOukPtvT4Iij36NdvZl37IVX-MqocHMaczVjTg9U-3S20r1U7EzpGF4eGcVVLHfQSxrf7djzbIQq2ovokWsR9yb_VsCZ502CQAgmZ4Oe5Z6N2-BE_jVS1xRemDZc2jxyUNTh4YuE"
+            title: "Salão de Eventos",
+            cap: "Sob consulta",
+            desc: "Localizado no Restaurante Maria Bastos — ideal para aniversários, casamentos e confraternizações com buffet customizado incluso",
+            img: "/images/optimized/eventos/ambiente-restaurante-01-lg.webp"
           }
         ].map((item, idx) => (
           <motion.div 
@@ -79,9 +82,10 @@ export const EventsSection: React.FC<EventsSectionProps> = ({ onOpenBooking }) =
           >
             <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent opacity-80" />
-            <div className="absolute bottom-6 left-6 text-white">
+            <div className="absolute bottom-6 left-6 right-6 text-white">
               <h3 className="text-2xl font-serif font-bold mb-1">{item.title}</h3>
               <p className="text-gray-300 text-sm">Capacidade: {item.cap}</p>
+              {item.desc && <p className="text-gray-400 text-xs mt-1 line-clamp-2">{item.desc}</p>}
             </div>
           </motion.div>
         ))}
@@ -89,10 +93,10 @@ export const EventsSection: React.FC<EventsSectionProps> = ({ onOpenBooking }) =
       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mt-12 md:mt-20 pt-8 md:pt-10 border-t border-gray-200">
         {[
-          { icon: 'wifi', label: 'Wi-Fi de Alta Velocidade', desc: 'Conectividade garantida em todo o hotel.' },
-          { icon: 'videocam', label: 'Sistema Audiovisual', desc: 'Tecnologia de ponta para apresentações.' },
-          { icon: 'restaurant_menu', label: 'Catering Premium', desc: 'Menus exclusivos para todos os gostos.' },
-          { icon: 'local_parking', label: 'Valet Parking', desc: 'Segurança e conveniência para seus convidados.' }
+          { icon: 'wifi', label: 'Wi-Fi', desc: 'Conectividade em todos os espaços.' },
+          { icon: 'videocam', label: 'Som e Imagem', desc: 'Serviço de audiovisual completo.' },
+          { icon: 'restaurant_menu', label: 'Buffet Customizado', desc: 'Restaurante Maria Bastos com menu personalizado.' },
+          { icon: 'local_parking', label: 'Estacionamento', desc: 'Amplo estacionamento para convidados.' }
         ].map((feat, i) => (
           <motion.div 
             key={i}

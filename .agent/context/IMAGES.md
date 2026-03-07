@@ -2,7 +2,7 @@
 
 ## Status
 
-🔴 **Todas as imagens são mock** — Aguardando fotos reais do hotel.
+🟡 **Imagens mock em uso** — Aguardando fotos reais do hotel para substituição.
 
 ## Imagens a Substituir
 
@@ -19,27 +19,27 @@
 | 7   | Suítes       | Banheiro luxuoso           | [Pendente]   |
 | 8   | Lounge       | Área de estar              | [Pendente]   |
 
-### Quartos (`constants.tsx` → ROOMS)
+### Apartamentos (`constants.tsx` → ROOMS)
 
-| ID           | Tipo               | URL Atual     | Arquivo Real |
-| ------------ | ------------------ | ------------- | ------------ |
-| deluxe       | Quartos Deluxe     | Unsplash mock | [Pendente]   |
-| junior       | Suítes Júnior      | Unsplash mock | [Pendente]   |
-| presidential | Suíte Presidencial | Unsplash mock | [Pendente]   |
+| ID             | Tipo           | URL Atual     | Arquivo Real |
+| -------------- | -------------- | ------------- | ------------ |
+| simples        | Simples        | Unsplash mock | [Pendente]   |
+| duplo          | Duplo          | Unsplash mock | [Pendente]   |
+| casal          | Casal          | Unsplash mock | [Pendente]   |
+| triplo         | Triplo         | Unsplash mock | [Pendente]   |
+| master         | Master         | Unsplash mock | [Pendente]   |
+| master-luxo    | Master Luxo    | Google mock   | [Pendente]   |
+| acessibilidade | Acessibilidade | Unsplash mock | [Pendente]   |
 
 ### Hero/Banner
 
 - **Arquivo:** `components/Hero.tsx`
-- **Status:** [Verificar se há imagem de fundo]
+- **Status:** Mock Unsplash (hotel lobby)
 
-## Recomendações para Imagens Reais
+### Eventos
 
-- **Formato:** WebP ou JPG otimizado
-- **Resolução:** Mínimo 1920x1080 para banners, 800x600 para cards
-- **Tamanho:** < 500KB por imagem (otimizar com TinyPNG/Squoosh)
-- **Hospedagem sugerida:**
-  - Pasta `/public/images/` do projeto, ou
-  - CDN como Cloudinary/ImageKit
+- **Arquivo:** `components/EventsSection.tsx`
+- **Status:** Mock Google (3 espaços: Auditório, Sala de Reuniões, Salão de Eventos)
 
 ## Processo de Substituição
 
@@ -51,4 +51,4 @@
 
 ---
 
-_Última atualização: 2026-02-05_
+_Última atualização: 2026-03-07_

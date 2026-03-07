@@ -22,11 +22,28 @@ export const Hero: React.FC = () => {
     <section className="relative h-[calc(100dvh-72px)] md:h-[85vh] w-full flex items-center justify-center overflow-hidden">
       {/* Background com imagem de um lobby moderno e sofisticado com pé direito alto */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80&w=2070"
-          alt="Lobby moderno e luxuoso com pé direito alto do Hotel Maria Bastos"
-          className="w-full h-full object-cover brightness-[0.6] scale-105"
-        />
+        <picture>
+          <source
+            media="(max-width: 640px)"
+            srcSet="/images/optimized/hero/banner-sm.webp"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 1024px)"
+            srcSet="/images/optimized/hero/banner-md.webp"
+            type="image/webp"
+          />
+          <source
+            srcSet="/images/optimized/hero/banner-lg.webp"
+            type="image/webp"
+          />
+          <img
+            src="/images/optimized/hero/banner-lg.jpg"
+            alt="Vista do Hotel Maria Bastos em Tauá-CE"
+            className="w-full h-full object-cover brightness-[0.6] scale-105"
+            loading="eager"
+          />
+        </picture>
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80" />
       </div>
 
@@ -45,8 +62,8 @@ export const Hero: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-3xl sm:text-5xl md:text-7xl font-serif mb-4 md:mb-8 leading-tight"
         >
-          Onde o Luxo Encontra a{" "}
-          <span className="italic">Tranquilidade do Sertão</span>
+          Onde o Conforto Encontra a{" "}
+          <span className="italic">Hospitalidade do Sertão</span>
         </motion.h1>
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}

@@ -9,16 +9,19 @@ interface RoomsSectionProps {
 export const RoomsSection: React.FC<RoomsSectionProps> = ({
   onOpenBooking,
 }) => {
-  const [selectedRoom, setSelectedRoom] = useState(ROOMS[ROOMS.length - 1]);
+  const [selectedRoom, setSelectedRoom] = useState(ROOMS[0]);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
-  // Gera array de imagens para o quarto selecionado
-  const getRoomImages = (room: typeof selectedRoom) => [
-    room.image,
-    `https://picsum.photos/seed/room${room.id}1/800/800`,
-    `https://picsum.photos/seed/room${room.id}2/800/800`,
-    `https://picsum.photos/seed/room${room.id}3/800/800`,
-  ];
+  // Usa as imagens reais se disponíveis, senão fallback para mock
+  const getRoomImages = (room: typeof selectedRoom) => {
+    if (room.images && room.images.length > 0) return room.images;
+    return [
+      room.image,
+      `https://picsum.photos/seed/room${room.id}1/800/800`,
+      `https://picsum.photos/seed/room${room.id}2/800/800`,
+      `https://picsum.photos/seed/room${room.id}3/800/800`,
+    ];
+  };
 
   const roomImages = getRoomImages(selectedRoom);
 
@@ -37,12 +40,12 @@ export const RoomsSection: React.FC<RoomsSectionProps> = ({
     >
       <div className="flex flex-col gap-4 mb-12">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-primary">
-          Nossos Quartos & Suítes
+          Nossos Apartamentos
         </h2>
         <p className="text-gray-600 max-w-2xl">
-          Descubra o refúgio perfeito, onde o luxo encontra o conforto em cada
-          detalhe. Cada acomodação foi projetada para oferecer uma experiênca
-          única.
+          Conforto e praticidade em Tauá-CE. Todos os apartamentos contam com
+          Wi-Fi, frigobar, TV Smart, ar-condicionado, móveis projetados e café
+          da manhã incluso.
         </p>
       </div>
 
@@ -77,21 +80,21 @@ export const RoomsSection: React.FC<RoomsSectionProps> = ({
               <img
                 src={roomImages[selectedImageIndex]}
                 alt={selectedRoom.name}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover brightness-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
             </motion.div>
           </AnimatePresence>
 
-          <div className="grid grid-cols-4 gap-2 sm:gap-4">
+          <div className="flex gap-2 sm:gap-3 overflow-x-auto pb-2 scrollbar-thin">
             {roomImages.map((img, i) => (
               <div
                 key={i}
                 onClick={() => setSelectedImageIndex(i)}
-                className={`rounded-2xl overflow-hidden aspect-square hover:scale-105 transition-all duration-300 cursor-pointer ${
+                className={`flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-xl overflow-hidden hover:scale-105 transition-all duration-300 cursor-pointer ${
                   selectedImageIndex === i
-                    ? "ring-4 ring-primary ring-offset-2 shadow-lg"
-                    : "opacity-70 hover:opacity-100"
+                    ? "ring-3 ring-primary ring-offset-2 shadow-lg brightness-110"
+                    : "opacity-60 hover:opacity-100"
                 }`}
               >
                 <img
@@ -114,9 +117,31 @@ export const RoomsSection: React.FC<RoomsSectionProps> = ({
             className="space-y-8 bg-white p-8 rounded-3xl border border-gray-100 shadow-xl"
           >
             <div>
-              <h3 className="text-3xl font-serif text-primary mb-4">
+              <h3 className="text-3xl font-serif text-primary mb-2">
                 {selectedRoom.name}
               </h3>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="inline-flex items-center gap-1 bg-primary/5 text-primary text-xs font-bold px-3 py-1 rounded-full">
+                  <span className="material-symbols-outlined text-sm">straighten</span>
+                  {selectedRoom.area}
+                </span>
+                <span className="inline-flex items-center gap-1 bg-primary/5 text-primary text-xs font-bold px-3 py-1 rounded-full">
+                  <span className="material-symbols-outlined text-sm">person</span>
+                  {selectedRoom.capacity}
+                </span>
+                {selectedRoom.hasBalcony && (
+                  <span className="inline-flex items-center gap-1 bg-accent/10 text-accent text-xs font-bold px-3 py-1 rounded-full">
+                    <span className="material-symbols-outlined text-sm">balcony</span>
+                    Com Varanda
+                  </span>
+                )}
+                {selectedRoom.highlight && (
+                  <span className="inline-flex items-center gap-1 bg-accent/10 text-accent text-xs font-bold px-3 py-1 rounded-full">
+                    <span className="material-symbols-outlined text-sm">star</span>
+                    {selectedRoom.highlight}
+                  </span>
+                )}
+              </div>
               <p className="text-gray-600 leading-relaxed">
                 {selectedRoom.description}
               </p>

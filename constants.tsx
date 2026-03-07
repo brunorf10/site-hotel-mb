@@ -5,98 +5,275 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 1,
     category: Category.SUITES,
-    url: "https://lh3.googleusercontent.com/aida-public/AB6AXuA2SeHPrJQZ4MF763fSZ44hftgWA0c3D-5BHoOSFKqtDSlm2bm5MWIIozSfuY0ee_JvvjpYWMsB2myxxdK_cdacCfI0AUpnek8NaWo6rEyQj5LdNZ2UnBMnNoKCnbqIMZXDvboCgfpwOcz_5iDeJwY14zdil8L0VEIDDp-ydTcq-uT9U9VjAaxSMz8k6QHQOoJkw4CMjktwUqkcEmYtAi4tPuLbzLrGgybMbkjQ4X16_HLCp4kPLSlwJ9UpadWt-53rXM22Xgig5WSn",
-    alt: "Suíte espaçosa com cama king-size e varanda"
+    url: "/images/optimized/galeria/suite-espacosa-lg.webp",
+    alt: "Suíte espaçosa com cama e varanda"
   },
   {
     id: 2,
     category: Category.GASTRONOMY,
-    url: "https://lh3.googleusercontent.com/aida-public/AB6AXuC0x5wWhsxymLWcImAaUgdWl_oFjoK65ytIkNRgdY1lcYPkd5Q6_UFhlHvhBO3x9w6WCEuXj7ovUWKVagAmsc8jhTB8hhmPw6wS6qahdk1l7Md8zxChaiH00KMMkHdaikupBDV6ELpG2gcNZedMr5khHiaGdFUIHZ-0e-yNLKDFh1SzJH_mNKpglGVw54nGl1iL2fZK15JLGkgOwyEAusfZzUSTapCN4Ql_4PBKZeMVz0B7IOp1h2bE0WubgF7It1TLHEaEqCA2SXRB",
-    alt: "Prato gourmet com empratamento sofisticado"
+    url: "/images/optimized/galeria/Prato-Gourmet-lg.webp",
+    alt: "Prato gourmet do Restaurante Maria Bastos"
   },
   {
     id: 3,
-    category: Category.LOUNGE,
-    url: "https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80&w=2070",
-    alt: "Lounge de espera com mobiliário em madeira e couro"
+    category: Category.COMMON,
+    url: "/images/optimized/galeria/lobby-pe-direito-lg.webp",
+    alt: "Lobby com pé direito alto"
   },
   {
     id: 4,
     category: Category.COMMON,
-    url: "https://lh3.googleusercontent.com/aida-public/AB6AXuAjjDC4KB1PVY9JykfZ4t6LkacOQbaFSlBMJ-jJWQBViD06EVJkklxFu4VImGikKekpKqLoxHnmcyw90HNc8puBVX6gRfddI35qA-6_tpNaulyvXue--t0TOwyoqZ5Tuh7CC3QxbSacXQLnA8Fpl9_oHdTLDNZ-EaVQdT9OQGNPTbwoKdR8VuichW33F7oGORX3fOnjiTT7zGN50OVtV-BPBT32G4dVxTGkadeAWImTn3XRANU6QZ6WuSQSkIdmxNtJqHuefKg4a9q_",
-    alt: "Lobby moderno com pé direito alto e luminárias artísticas"
+    url: "/images/optimized/galeria/carregador-veicular-lg.webp",
+    alt: "Carregador veicular nas áreas comuns"
   },
   {
     id: 5,
     category: Category.GASTRONOMY,
-    url: "https://lh3.googleusercontent.com/aida-public/AB6AXuCCPiiFyChwjiPYdPgMdStTL0U0rrWACuAdxH-pKCtjwmzWG5JHpjSuVLOQlhxH463FR7UyOzmk4vQ7C4fxlmUlpHnoj59pe00ZQosZb6EvIcng5cAUxm0kmhNbCvhZt1QWQ60RsQV80_qa5TGxY_bNYuyP305_QQL0r236dxDBGjFHaJNUMSkcaPMlic03qGAFBo2xoQAMEVNU7wBbUIOhLr8aUyKuwLdNKUJ8Mk1SMt_u9K4zjpwBu-HTBLj3ClozO5CisQY_x-g4",
-    alt: "Bar elegante do hotel com seleção de destilados premium"
+    url: "/images/optimized/galeria/Restaurante-MB-lg.webp",
+    alt: "Restaurante Maria Bastos"
   },
   {
     id: 6,
     category: Category.ARCHITECTURE,
-    url: "https://lh3.googleusercontent.com/aida-public/AB6AXuBLJ6tuM8W4orBwvAhnogY0mTLcZ0npYPGyllycL1wLZuHoEt7k6Sv0nyMXPUZKbdzRVG1B9POF6EMPdNNJ6xabN2398G7VbeZOZjqMg7Kf5lTea_-hP5zf7pVcpLyM5Z_eIvDh6JMH-2LtOAhbKFztyk8lKPRMBALgnOC9kQjrE0uzfySVcuf6Bly18ymL9c6Cj1Qt_H0-oZrz9-shrYeiy15qg8BpOFkuKhqfo2OZtUWhh_CV1aSyXqXu6l3KL68O8qizW4ugumgH",
-    alt: "Detalhes arquitetônicos da fachada do hotel"
+    url: "/images/optimized/galeria/Fachada-Hotel-lg.webp",
+    alt: "Fachada do Hotel Maria Bastos"
   },
   {
     id: 7,
     category: Category.SUITES,
-    url: "https://lh3.googleusercontent.com/aida-public/AB6AXuD3HzXvOIX1Z5AiIofOkg_iPjbogJ3iv9A4be7547CfiBNBDWQ07_u0FkG9pECCVu1Mpsu_xFwCwXiwtbAt3ltdXWTcx-CqXA6kJp6-CObEufAyfkncYumAY9m_VK8ie9OfHpz9w9gWAqKRg8rn7z4zu6k2pENDL67dbr5zluhVmGueCbrvMV9jrwMcBOagPFJutpZS6nJq9rWc1xIvPtpRNHLfXYZQ9tWgRp_lk45W7afy5oFXdiMgT1lObV8DXSYBdLszbpqnAUI7",
-    alt: "Banheiro luxuoso com mármore e banheira autoportante"
+    url: "/images/optimized/galeria/banheiro-luxuoso-lg.webp",
+    alt: "Banheiro luxuoso dos apartamentos"
   },
   {
     id: 8,
-    category: Category.LOUNGE,
-    url: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&q=80&w=2070",
-    alt: "Área de estar íntima com tons terrosos"
+    category: Category.GASTRONOMY,
+    url: "/images/optimized/galeria/sobremesa-lg.webp",
+    alt: "Sobremesa artesanal"
+  },
+  {
+    id: 9,
+    category: Category.COMMON,
+    url: "/images/optimized/galeria/recepcao-lg.webp",
+    alt: "Recepção do hotel"
+  },
+  {
+    id: 10,
+    category: Category.GASTRONOMY,
+    url: "/images/optimized/galeria/cafe-da-manha-lg.webp",
+    alt: "Café da manhã incluso"
+  },
+  {
+    id: 11,
+    category: Category.COMMON,
+    url: "/images/optimized/galeria/Elevador-lg.webp",
+    alt: "Elevador do hotel"
+  },
+  {
+    id: 12,
+    category: Category.ARCHITECTURE,
+    url: "/images/optimized/galeria/Escadas-lg.webp",
+    alt: "Escadas internas do hotel"
+  },
+  {
+    id: 13,
+    category: Category.COMMON,
+    url: "/images/optimized/galeria/sinalizacao-quartos-lg.webp",
+    alt: "Sinalização dos quartos"
+  },
+  {
+    id: 14,
+    category: Category.SUITES,
+    url: "/images/optimized/galeria/varanda-com-vista-privilegiada-lg.webp",
+    alt: "Varanda com vista privilegiada"
+  },
+  {
+    id: 15,
+    category: Category.SUITES,
+    url: "/images/optimized/galeria/tvs-em-todos-os-quartos-lg.webp",
+    alt: "TVs Smart em todos os quartos"
+  },
+  {
+    id: 16,
+    category: Category.GASTRONOMY,
+    url: "/images/optimized/galeria/sobremesa-personalizada-lg.webp",
+    alt: "Sobremesa personalizada"
   }
+];
+
+// Amenidades presentes em todas as categorias
+const COMMON_AMENITIES = [
+  { icon: 'shower', label: 'Chuveiro Elétrico' },
+  { icon: 'kitchen', label: 'Frigobar' },
+  { icon: 'call', label: 'Interfone' },
+  { icon: 'live_tv', label: 'Smart TV 43"' },
+  { icon: 'wifi', label: 'Wi-Fi' },
+  { icon: 'blinds_closed', label: 'Cortina Blackout' },
+  { icon: 'desk', label: 'Escrivaninha' },
+  { icon: 'checkroom', label: 'Guarda-roupas' },
+  { icon: 'deployed_code', label: 'Espelho Orgânico' },
+  { icon: 'chair', label: 'Móveis Projetados' },
+  { icon: 'ac_unit', label: 'Climatizado' },
+];
+
+// Serviços comuns a todos
+const COMMON_SERVICES = [
+  'Café da manhã incluso (6:30 às 9h)',
+  'Estacionamento',
+  'Pet Friendly',
 ];
 
 export const ROOMS: Room[] = [
   {
-    id: 'deluxe',
-    name: 'Quartos Deluxe',
-    description: 'Conforto excepcional com toques de design contemporâneo e materiais nobres.',
-    image: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&q=80&w=2070',
-    amenities: [
-      { icon: 'king_bed', label: 'Cama King-Size' },
-      { icon: 'wifi', label: 'Wi-Fi Grátis' },
-      { icon: 'ac_unit', label: 'Climatização' }
-    ],
-    services: ['Café da manhã incluso', 'Serviço de quarto 24h']
+    id: 'simples',
+    name: 'Simples',
+    description: 'Apartamento aconchegante e funcional, ideal para viajantes solo que buscam conforto e praticidade no coração de Tauá.',
+    image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&q=80&w=2070',
+    area: '14,68 m²',
+    capacity: '01 pessoa',
+    hasBalcony: true,
+    amenities: [...COMMON_AMENITIES],
+    services: [...COMMON_SERVICES],
   },
   {
-    id: 'junior',
-    name: 'Suítes Júnior',
-    description: 'Espaço ampliado com área de estar dedicada e janelas panorâmicas.',
-    image: 'https://images.unsplash.com/photo-1590490359683-658d3d23f972?auto=format&fit=crop&q=80&w=1974',
-    amenities: [
-      { icon: 'king_bed', label: 'Cama King-Size' },
-      { icon: 'balcony', label: 'Varanda Privada' },
-      { icon: 'coffee_maker', label: 'Nespresso' }
+    id: 'duplo',
+    name: 'Duplo',
+    description: 'Espaço confortável com duas camas de solteiro e varanda, perfeito para amigos ou colegas em viagem.',
+    image: '/images/optimized/apartamentos/duplo/01 - Visão do Quarto-lg.webp',
+    images: [
+      '/images/optimized/apartamentos/duplo/01 - Visão do Quarto-lg.webp',
+      '/images/optimized/apartamentos/duplo/02 - Camas-lg.webp',
+      '/images/optimized/apartamentos/duplo/03 - Camas-lg.webp',
+      '/images/optimized/apartamentos/duplo/04 - Tv-lg.webp',
+      '/images/optimized/apartamentos/duplo/05 - Mesa-lg.webp',
     ],
-    services: ['Frigobar premium', 'Check-in antecipado']
+    area: '17,85 m²',
+    capacity: '02 pessoas',
+    hasBalcony: true,
+    amenities: [...COMMON_AMENITIES],
+    services: [...COMMON_SERVICES],
   },
   {
-    id: 'presidential',
-    name: 'Suíte Presidencial',
-    description: 'A experiência definitiva de luxo. Nossa suíte mais exclusiva oferece vistas panorâmicas para o horizonte do sertão, design requintado e serviços personalizados.',
-    image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&q=80&w=2070",
-    amenities: [
-      { icon: 'king_bed', label: 'Cama King-Size' },
-      { icon: 'balcony', label: 'Terraço Privado' },
-      { icon: 'bathtub', label: 'Banheira de Imersão' },
-      { icon: 'landscape', label: 'Vista Panorâmica' },
-      { icon: 'wifi', label: 'Wi-Fi de Alta Velocidade' },
-      { icon: 'coffee_maker', label: 'Máquina Nespresso' },
-      { icon: 'live_tv', label: 'Smart TV 75"' },
-      { icon: 'ac_unit', label: 'Climatização Central' }
+    id: 'casal',
+    name: 'Casal',
+    description: 'Apartamento romântico com cama de casal e varanda privativa, pensado para casais que desejam conforto e tranquilidade.',
+    image: '/images/optimized/apartamentos/casal/02 - Visão do Quarto-lg.webp',
+    images: [
+      '/images/optimized/apartamentos/casal/02 - Visão do Quarto-lg.webp',
+      '/images/optimized/apartamentos/casal/03 - Cama-lg.webp',
+      '/images/optimized/apartamentos/casal/04 - Cama (Detalhe)-lg.webp',
+      '/images/optimized/apartamentos/casal/01 - Varanda-lg.webp',
+      '/images/optimized/apartamentos/casal/05 - Tv-lg.webp',
+      '/images/optimized/apartamentos/casal/06 - Mesa-lg.webp',
     ],
-    services: [
-      'Serviço de mordomo 24 horas',
-      'Check-in e check-out privativos',
-      'Café da manhã servido na suíte por chef particular',
-      'Acesso exclusivo ao Lounge Executivo'
-    ]
-  }
+    area: '17,85 m²',
+    capacity: '02 pessoas',
+    hasBalcony: true,
+    amenities: [...COMMON_AMENITIES],
+    services: [...COMMON_SERVICES],
+  },
+  {
+    id: 'triplo',
+    name: 'Triplo',
+    description: 'Apartamento espaçoso para até 3 hóspedes, ideal para famílias ou pequenos grupos que valorizam amplitude e conforto.',
+    image: '/images/optimized/apartamentos/triplo/01 - Visão do Quarto-lg.webp',
+    images: [
+      '/images/optimized/apartamentos/triplo/01 - Visão do Quarto-lg.webp',
+      '/images/optimized/apartamentos/triplo/02 - Camas-lg.webp',
+      '/images/optimized/apartamentos/triplo/03 - Camas-lg.webp',
+      '/images/optimized/apartamentos/triplo/05 - Frigobar-lg.webp',
+      '/images/optimized/apartamentos/triplo/06 - Mesa-lg.webp',
+      '/images/optimized/apartamentos/triplo/07 - Espelho-lg.webp',
+      '/images/optimized/apartamentos/triplo/08 - Tv-lg.webp',
+      '/images/optimized/apartamentos/triplo/09 - Móvel para roupas-lg.webp',
+      '/images/optimized/apartamentos/triplo/10 - Banheiro-lg.webp',
+      '/images/optimized/apartamentos/triplo/11 - Banheiro-lg.webp',
+    ],
+    area: '23,53 m²',
+    capacity: '03 pessoas',
+    hasBalcony: false,
+    amenities: [...COMMON_AMENITIES],
+    services: [...COMMON_SERVICES],
+  },
+  {
+    id: 'master',
+    name: 'Master',
+    description: 'Apartamento premium com TV de 50 polegadas e varanda, para quem busca uma estadia diferenciada com mais sofisticação.',
+    image: '/images/optimized/apartamentos/master/01 - Visão do Quarto-lg.webp',
+    images: [
+      '/images/optimized/apartamentos/master/01 - Visão do Quarto-lg.webp',
+      '/images/optimized/apartamentos/master/02 - Visão do Quarto-lg.webp',
+      '/images/optimized/apartamentos/master/03 - Cama-lg.webp',
+      '/images/optimized/apartamentos/master/04 - Cama-lg.webp',
+      '/images/optimized/apartamentos/master/05 - Detalhes-lg.webp',
+      '/images/optimized/apartamentos/master/06 - Detalhes-lg.webp',
+      '/images/optimized/apartamentos/master/07 - Tv-lg.webp',
+      '/images/optimized/apartamentos/master/08 - Banheiro-lg.webp',
+      '/images/optimized/apartamentos/master/09 - Banheiro-lg.webp',
+      '/images/optimized/apartamentos/master/10 - Banheiro-lg.webp',
+    ],
+    area: '20,00 m²',
+    capacity: '02 pessoas',
+    hasBalcony: true,
+    amenities: [
+      ...COMMON_AMENITIES.filter(a => a.label !== 'Smart TV 43"'),
+      { icon: 'live_tv', label: 'Smart TV 50"' },
+    ],
+    services: [...COMMON_SERVICES],
+    highlight: 'TV 50 polegadas',
+  },
+  {
+    id: 'master-luxo',
+    name: 'Master Luxo',
+    description: 'Nossa categoria mais sofisticada. TV de 55 polegadas, varanda privativa e acabamento premium para uma experiência exclusiva em Tauá.',
+    image: '/images/optimized/apartamentos/master-luxo/01 - Visão do Quarto-lg.webp',
+    images: [
+      '/images/optimized/apartamentos/master-luxo/01 - Visão do Quarto-lg.webp',
+      '/images/optimized/apartamentos/master-luxo/02 - Varanda-lg.webp',
+      '/images/optimized/apartamentos/master-luxo/03 - Cama-lg.webp',
+      '/images/optimized/apartamentos/master-luxo/04 - Cama-lg.webp',
+      '/images/optimized/apartamentos/master-luxo/05 - Guarda Roupas-lg.webp',
+      '/images/optimized/apartamentos/master-luxo/05 - Tv-lg.webp',
+      '/images/optimized/apartamentos/master-luxo/06 - Detalhes-lg.webp',
+      '/images/optimized/apartamentos/master-luxo/07 - Banheiro-lg.webp',
+      '/images/optimized/apartamentos/master-luxo/08 - Banheiro-lg.webp',
+      '/images/optimized/apartamentos/master-luxo/09 - Banheiro-lg.webp',
+      '/images/optimized/apartamentos/master-luxo/10 - Detalhes-lg.webp',
+      '/images/optimized/apartamentos/master-luxo/11 - Detalhes-lg.webp',
+    ],
+    area: '17,85 m²',
+    capacity: '02 pessoas',
+    hasBalcony: true,
+    amenities: [
+      ...COMMON_AMENITIES.filter(a => a.label !== 'Smart TV 43"'),
+      { icon: 'live_tv', label: 'Smart TV 55"' },
+    ],
+    services: [...COMMON_SERVICES],
+    highlight: 'TV 55 polegadas',
+  },
+  {
+    id: 'acessibilidade',
+    name: 'Acessibilidade',
+    description: 'Apartamento adaptado com acessibilidade completa, incluindo cadeira de banho geriátrica, garantindo conforto e segurança para todos.',
+    image: '/images/optimized/apartamentos/acessibilidade/01 - Visao geral do quarto-lg.webp',
+    images: [
+      '/images/optimized/apartamentos/acessibilidade/01 - Visao geral do quarto-lg.webp',
+      '/images/optimized/apartamentos/acessibilidade/02 - Cama-lg.webp',
+      '/images/optimized/apartamentos/acessibilidade/03 - banheiro-lg.webp',
+      '/images/optimized/apartamentos/acessibilidade/04 - banheiro (detalhe 01)-lg.webp',
+      '/images/optimized/apartamentos/acessibilidade/05 - banheiro (detalhe 02)-lg.webp',
+      '/images/optimized/apartamentos/acessibilidade/06 - TV-lg.webp',
+      '/images/optimized/apartamentos/acessibilidade/07 - Mesa de trabalho-lg.webp',
+    ],
+    area: '23,60 m²',
+    capacity: '02 pessoas',
+    hasBalcony: false,
+    amenities: [
+      ...COMMON_AMENITIES,
+      { icon: 'accessible', label: 'Acessibilidade Completa' },
+      { icon: 'event_seat', label: 'Cadeira de Banho Geriátrica' },
+    ],
+    services: [...COMMON_SERVICES],
+    highlight: 'Apartamento Adaptado',
+  },
 ];
+

@@ -42,26 +42,31 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
               </div>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Redefinindo o luxo e a hospitalidade no coração do semiárido
-              cearense. Oferecemos refúgio e sofisticação em meio à exuberância
-              do sertão.
+              Conforto e hospitalidade no coração de Tauá-CE. Vista panorâmica
+              da cidade, restaurante com culinária regional, café da manhã
+              incluso e espaços para eventos.
             </p>
             <div className="flex gap-4">
-              {["facebook", "instagram", "twitter"].map((social) => (
-                <a
-                  key={social}
-                  href="#"
-                  className="size-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-accent hover:border-accent transition-all text-white/70 hover:text-white"
-                >
-                  <span className="material-symbols-outlined text-lg">
-                    {social === "instagram"
-                      ? "photo_camera"
-                      : social === "facebook"
-                      ? "public"
-                      : "share"}
-                  </span>
-                </a>
-              ))}
+              <a
+                href="https://instagram.com/hotelmbtaua"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="size-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-accent hover:border-accent transition-all text-white/70 hover:text-white"
+              >
+                <span className="material-symbols-outlined text-lg">
+                  photo_camera
+                </span>
+              </a>
+              <a
+                href="https://wa.me/5588963722226"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="size-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-accent hover:border-accent transition-all text-white/70 hover:text-white"
+              >
+                <span className="material-symbols-outlined text-lg">
+                  chat
+                </span>
+              </a>
             </div>
           </div>
 
@@ -185,7 +190,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
 
         <div className="pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-[11px] text-gray-500 uppercase tracking-widest">
-            © 2024 Hotel Maria Bastos. Todos os direitos reservados.
+            © 2025 Hotel Maria Bastos. Todos os direitos reservados.
           </p>
           <div className="flex items-center gap-6">
             <span className="text-[11px] text-gray-500 uppercase tracking-widest flex items-center gap-1">

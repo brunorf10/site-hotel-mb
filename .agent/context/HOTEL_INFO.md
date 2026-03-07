@@ -1,71 +1,73 @@
 # Dados do Hotel Maria Bastos
 
-> ⚠️ **ATENÇÃO:** Este arquivo contém dados placeholder. Atualizar após reunião com o cliente.
+> ✅ **Dados reais** — Atualizado em 2026-03-07
 
 ## Informações Gerais
 
 - **Nome:** Hotel Maria Bastos
-- **Localização:** [A definir - Sertão brasileiro]
-- **Endereço:** [A definir]
-- **Telefone:** [A definir]
-- **WhatsApp:** [A definir]
-- **E-mail:** [A definir]
-- **Instagram:** [A definir]
+- **Localização:** Tauá – CE
+- **Endereço:** Rua Solon Medeiros, 365 – Alto Brilhante – Tauá-CE
+- **Telefone:** (88) 3437-4001
+- **WhatsApp:** (88) 9637-2226
+- **E-mail:** contato@hotelmariabastos.com.br
+- **Instagram:** @hotelmbtaua
 
-## Acomodações
+## Equipamentos (todas as categorias)
 
-### Quartos Deluxe
+- Chuveiro elétrico, Frigobar, Interfone
+- TV Smart 43" (exceto Master: 50" e Master Luxo: 55")
+- Wi-Fi, Cortina blackout, Escrivaninha
+- Guarda-roupas, Espelho orgânico, Móveis projetados
+- Climatizado (ar condicionado)
 
-- **Quantidade:** [A definir]
-- **Capacidade:** [A definir]
-- **Metragem:** [A definir]
-- **Diferenciais:** [A definir]
-- **Diária:** [A definir]
+## Complemento
 
-### Suítes Júnior
+- Pet friendly
+- Estacionamento
+- Café da manhã incluso (6:30 às 9h)
 
-- **Quantidade:** [A definir]
-- **Capacidade:** [A definir]
-- **Metragem:** [A definir]
-- **Diferenciais:** [A definir]
-- **Diária:** [A definir]
+## Categorias de Apartamentos
 
-### Suíte Presidencial
+| Categoria      | Metragem | Varanda     | Acomodação | Observações                 |
+| -------------- | -------- | ----------- | ---------- | --------------------------- |
+| Simples        | 14,68 m² | Com varanda | 01 pessoa  |                             |
+| Duplo          | 17,85 m² | Com varanda | 02 pessoas |                             |
+| Casal          | 17,85 m² | Com varanda | 02 pessoas |                             |
+| Triplo         | 23,53 m² | Sem varanda | 03 pessoas |                             |
+| Master         | 20,00 m² | Com varanda | 02 pessoas | TV 50 polegadas             |
+| Master Luxo    | 17,85 m² | Com varanda | 02 pessoas | TV 55 polegadas             |
+| Acessibilidade | 23,60 m² | –           | 02 pessoas | Cadeira de banho geriátrica |
 
-- **Quantidade:** [A definir]
-- **Capacidade:** [A definir]
-- **Metragem:** [A definir]
-- **Diferenciais:** [A definir]
-- **Diária:** [A definir]
+## Espaços para Eventos
 
-## Serviços
+### Auditório
 
-- [ ] Café da manhã incluso?
-- [ ] Estacionamento?
-- [ ] Piscina?
-- [ ] Restaurante?
-- [ ] Wi-Fi?
-- [ ] Ar-condicionado?
-- [ ] Pet friendly?
-- [ ] Acessibilidade?
+- Capacidade: 170 pessoas
+- Climatizado
+- Serviço de som e imagem
+- Toalete masculino e feminino
 
-## Eventos e Corporativo
+### Sala de Reuniões
 
-- **Espaços disponíveis:** [A definir]
-- **Capacidade máxima:** [A definir]
-- **Equipamentos:** [A definir]
+- Capacidade: 20 pessoas
+- Climatizada
+- Móveis projetados
+- Serviço de som e imagem
 
-## Horários
+### Salão de Eventos (Restaurante Maria Bastos)
 
-- **Check-in:** [A definir]
-- **Check-out:** [A definir]
-- **Recepção:** [A definir]
-- **Restaurante:** [A definir]
+- Localizado dentro do Restaurante Maria Bastos
+- Ideal para aniversários, casamentos, confraternizações
+- Buffet customizado incluso na contratação
 
 ## Diferenciais / História
 
-[A definir - História do hotel, proposta de valor, etc.]
+- Localizado em Tauá-CE, com vista panorâmica da cidade
+- Atendimento personalizado
+- Restaurante próprio com pratos nacionais e regionais
+- Café da manhã incluso
+- Auditório para eventos
 
 ---
 
-_Última atualização: 2026-02-05_
+_Última atualização: 2026-03-07_
