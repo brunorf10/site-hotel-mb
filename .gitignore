@@ -12,9 +12,6 @@ dist
 dist-ssr
 *.local
 
-# Imagens otimizadas (geradas por scripts/optimize-images.mjs)
-public/images/optimized
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
