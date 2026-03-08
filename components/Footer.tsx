@@ -63,9 +63,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
                 rel="noopener noreferrer"
                 className="size-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-accent hover:border-accent transition-all text-white/70 hover:text-white"
               >
-                <span className="material-symbols-outlined text-lg">
-                  chat
-                </span>
+                <span className="material-symbols-outlined text-lg">chat</span>
               </a>
             </div>
           </div>
@@ -162,9 +160,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
             </h4>
             <ul className="space-y-4 text-sm text-gray-400">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <Link
+                  to="/termos-de-uso"
+                  className="hover:text-white transition-colors"
+                >
                   Termos de Uso
-                </a>
+                </Link>
               </li>
               <li>
                 <Link
@@ -175,14 +176,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
                 </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Cookies
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <Link
+                  to="/acessibilidade"
+                  className="hover:text-white transition-colors"
+                >
                   Acessibilidade
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -190,7 +189,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
 
         <div className="pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-[11px] text-gray-500 uppercase tracking-widest">
-            © 2025 Hotel Maria Bastos. Todos os direitos reservados.
+            © 2026 Hotel Maria Bastos. Todos os direitos reservados.
           </p>
           <div className="flex items-center gap-6">
             <span className="text-[11px] text-gray-500 uppercase tracking-widest flex items-center gap-1">

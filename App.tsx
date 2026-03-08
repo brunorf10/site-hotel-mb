@@ -13,6 +13,8 @@ import { Toaster } from "sonner";
 import { Routes, Route } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { PrivacyPolicy } from "./pages/PrivacyPolicy";
+import { TermsOfUse } from "./pages/TermsOfUse";
+import { Accessibility } from "./pages/Accessibility";
 
 const App: React.FC = () => {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
@@ -27,6 +29,8 @@ const App: React.FC = () => {
           element={<Home onOpenBooking={() => setIsBookingOpen(true)} />}
         />
         <Route path="/politica-de-privacidade" element={<PrivacyPolicy />} />
+        <Route path="/termos-de-uso" element={<TermsOfUse />} />
+        <Route path="/acessibilidade" element={<Accessibility />} />
       </Routes>
 
       <Footer onOpenBooking={() => setIsBookingOpen(true)} />

@@ -1,11 +1,9 @@
-
 export enum Category {
-  ALL = 'Todos',
-  SUITES = 'Suítes & Quartos',
-  GASTRONOMY = 'Gastronomia & Bar',
-  LOUNGE = 'Lounge & Estar',
-  COMMON = 'Áreas Comuns',
-  ARCHITECTURE = 'Arquitetura'
+  ALL = "Todos",
+  SUITES = "Suítes & Quartos",
+  GASTRONOMY = "Gastronomia & Bar",
+  LOUNGE = "Lounge & Estar",
+  COMMON = "Infraestrutura & Serviços",
 }
 
 export interface GalleryItem {
