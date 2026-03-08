@@ -69,4 +69,5 @@ npm run preview  # Preview do build
 - [ ] Atualizar textos e descrições com informações oficiais
 - [ ] Revisar nomes e detalhes das acomodações
 - [ ] Adicionar informações de localização/endereço real
-- [ ] Configurar domínio personalizado na Vercel
+- [x] Configurar domínio personalizado na Vercel (`hotel.cactusolucoes.com` — temporário até `hotelmariabastos.com.br`)
+- [x] Adicionar meta tags Open Graph (prévia WhatsApp)

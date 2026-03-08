@@ -26,7 +26,7 @@
 - Estacionamento
 - Café da manhã incluso (6:30 às 9h)
 
-## Categorias de Apartamentos
+## Categorias de Quartos
 
 | Categoria      | Metragem | Varanda     | Acomodação | Observações                 |
 | -------------- | -------- | ----------- | ---------- | --------------------------- |
