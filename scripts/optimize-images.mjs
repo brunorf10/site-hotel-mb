@@ -103,13 +103,16 @@ function ensureDir(dir) {
 function getImageFiles(dir) {
   if (!fs.existsSync(dir)) return [];
   return fs.readdirSync(dir).filter(f => 
-    /\.(jpg|jpeg|png|webp|tiff|bmp|dng)$/i.test(f)
+    /\.(jpg|jpeg|png|webp|tiff|bmp|dng|heic|heif|arw)$/i.test(f)
   );
 }
 
 function getBaseName(filename) {
   return path.parse(filename).name;
 }
+
+// Rastreamento global de arquivos com erro
+const skippedFiles = [];
 
 async function processImage(inputPath, outputDir, config, baseName) {
   const results = [];
@@ -150,6 +153,19 @@ async function processImage(inputPath, outputDir, config, baseName) {
   return results;
 }
 
+// Wrapper com try/catch para processar imagem com tolerância a erros
+async function safeProcessImage(inputPath, outputDir, config, baseName, context) {
+  try {
+    return await processImage(inputPath, outputDir, config, baseName);
+  } catch (err) {
+    const ext = path.extname(inputPath).toUpperCase();
+    console.log(`    ⚠️  PULADO: ${context} — formato ${ext} não suportado pelo sharp`);
+    console.log(`       Erro: ${err.message.split('\n')[0]}`);
+    skippedFiles.push({ file: context, format: ext, error: err.message.split('\n')[0] });
+    return [];
+  }
+}
+
 // ─── Processamento por seção ────────────────────────────────────────
 
 async function processHero() {
@@ -163,11 +179,12 @@ async function processHero() {
   for (const file of files) {
     const baseName = getBaseName(file);
     console.log(`  🖼️  hero/${file}`);
-    await processImage(
+    await safeProcessImage(
       path.join(dir, file),
       outDir,
       SECTION_CONFIG.hero.sizes,
-      baseName
+      baseName,
+      `hero/${file}`
     );
   }
   console.log('✅ hero/ processado');
@@ -195,16 +212,17 @@ async function processApartamentos() {
         ? SECTION_CONFIG.apartamentos.principal.sizes
         : SECTION_CONFIG.apartamentos.principal.sizes;
 
-      await processImage(path.join(dir, file), outDir, config, baseName);
+      await safeProcessImage(path.join(dir, file), outDir, config, baseName, `apartamentos/${cat}/${file}`);
 
       // Gerar thumbnail quadrado para todas as imagens
       const thumbDir = path.join(outDir, 'thumbs');
       ensureDir(thumbDir);
-      await processImage(
+      await safeProcessImage(
         path.join(dir, file),
         thumbDir,
         SECTION_CONFIG.apartamentos.thumbnail.sizes,
-        baseName
+        baseName,
+        `apartamentos/${cat}/${file} (thumb)`
       );
     }
     console.log(`✅ apartamentos/${cat}/ processado`);
@@ -229,7 +247,7 @@ async function processEventos() {
       ? SECTION_CONFIG.eventos.banner.sizes
       : SECTION_CONFIG.eventos.card.sizes;
 
-    await processImage(path.join(dir, file), outDir, config, baseName);
+    await safeProcessImage(path.join(dir, file), outDir, config, baseName, `eventos/${file}`);
   }
   console.log('✅ eventos/ processado');
 }
@@ -245,7 +263,7 @@ async function processGaleria() {
   for (const file of files) {
     const baseName = getBaseName(file);
     console.log(`  🖼️  galeria/${file}`);
-    await processImage(path.join(dir, file), outDir, SECTION_CONFIG.galeria.sizes, baseName);
+    await safeProcessImage(path.join(dir, file), outDir, SECTION_CONFIG.galeria.sizes, baseName, `galeria/${file}`);
   }
   console.log('✅ galeria/ processado');
 }
@@ -261,7 +279,7 @@ async function processRestaurante() {
   for (const file of files) {
     const baseName = getBaseName(file);
     console.log(`  🖼️  restaurante/${file}`);
-    await processImage(path.join(dir, file), outDir, SECTION_CONFIG.restaurante.sizes, baseName);
+    await safeProcessImage(path.join(dir, file), outDir, SECTION_CONFIG.restaurante.sizes, baseName, `restaurante/${file}`);
   }
   console.log('✅ restaurante/ processado');
 }
@@ -307,6 +325,16 @@ async function main() {
   const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
   console.log(`🎉 Tudo pronto! Tempo: ${elapsed}s`);
   console.log(`📁 Imagens otimizadas em: ${OUTPUT_BASE}/`);
+  
+  if (skippedFiles.length > 0) {
+    console.log('');
+    console.log('⚠️  Arquivos pulados (formato não suportado):');
+    for (const s of skippedFiles) {
+      console.log(`   - ${s.file} (${s.format})`);
+    }
+    console.log('');
+    console.log('💡 Converta esses arquivos para JPG ou PNG e rode novamente.');
+  }
   console.log('');
 }
 

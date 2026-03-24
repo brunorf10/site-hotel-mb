@@ -40,11 +40,11 @@ export const Hero: React.FC = () => {
           <img
             src="/images/optimized/hero/banner-lg.jpg"
             alt="Vista do Hotel Maria Bastos em Tauá-CE"
-            className="w-full h-full object-cover brightness-[0.6] scale-105"
+            className="w-full h-full object-cover brightness-[0.85] scale-105"
             loading="eager"
           />
         </picture>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30" />
       </div>
 
       <div className="relative z-10 text-center text-white px-6 py-4 md:py-0 max-w-4xl flex flex-col items-center">

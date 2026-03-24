@@ -1,83 +1,90 @@
 import { Category, GalleryItem, Room } from "./types";
 
 export const GALLERY_ITEMS: GalleryItem[] = [
+  // ── Primeiras imagens: mix variado (sem infra) ──
   {
     id: 1,
+    category: Category.AERIAL,
+    url: "/images/optimized/galeria/drone-vista-frontal-ampla-lg.webp",
+    alt: "Vista aérea frontal ampla do hotel",
+  },
+  {
+    id: 2,
     category: Category.SUITES,
     url: "/images/optimized/galeria/suite-espacosa-lg.webp",
     alt: "Suíte espaçosa com cama e varanda",
   },
   {
-    id: 2,
+    id: 3,
     category: Category.GASTRONOMY,
     url: "/images/optimized/galeria/Prato-Gourmet-lg.webp",
     alt: "Prato gourmet do Restaurante Maria Bastos",
   },
   {
-    id: 3,
-    category: Category.LOUNGE,
-    url: "/images/optimized/galeria/lobby-pe-direito-lg.webp",
-    alt: "Lobby com pé direito alto",
-  },
-  {
     id: 4,
-    category: Category.COMMON,
-    url: "/images/optimized/galeria/carregador-veicular-lg.webp",
-    alt: "Carregador veicular nas áreas comuns",
+    category: Category.LOUNGE,
+    url: "/images/optimized/galeria/area-estar-loob-principal-lg.webp",
+    alt: "Lobby principal da área de estar",
   },
+
+  // ── Segundo bloco: continua variado ──
   {
     id: 5,
+    category: Category.AERIAL,
+    url: "/images/optimized/galeria/drone-vista-lateral-lg.webp",
+    alt: "Vista aérea lateral do hotel",
+  },
+  {
+    id: 6,
+    category: Category.SUITES,
+    url: "/images/optimized/galeria/quarto-com-varanda-lg.webp",
+    alt: "Quarto com varanda",
+  },
+  {
+    id: 7,
     category: Category.GASTRONOMY,
     url: "/images/optimized/galeria/Restaurante-MB-lg.webp",
     alt: "Restaurante Maria Bastos",
   },
   {
-    id: 6,
+    id: 8,
     category: Category.LOUNGE,
-    url: "/images/optimized/galeria/Fachada-Hotel-lg.webp",
-    alt: "Fachada do Hotel Maria Bastos",
+    url: "/images/optimized/galeria/lobby-pe-direito-lg.webp",
+    alt: "Lobby com pé direito alto",
+  },
+
+  // ── Terceiro bloco ──
+  {
+    id: 9,
+    category: Category.AERIAL,
+    url: "/images/optimized/galeria/drone-vista-diagonal-lg.webp",
+    alt: "Vista aérea diagonal do hotel",
   },
   {
-    id: 7,
+    id: 10,
     category: Category.SUITES,
     url: "/images/optimized/galeria/banheiro-luxuoso-lg.webp",
     alt: "Banheiro luxuoso dos apartamentos",
   },
   {
-    id: 8,
+    id: 11,
     category: Category.GASTRONOMY,
     url: "/images/optimized/galeria/sobremesa-lg.webp",
     alt: "Sobremesa artesanal",
   },
   {
-    id: 9,
-    category: Category.LOUNGE,
-    url: "/images/optimized/galeria/area-de-estar-lg.webp",
-    alt: "Área de estar do hotel",
-  },
-  {
-    id: 10,
-    category: Category.GASTRONOMY,
-    url: "/images/optimized/galeria/cafe-da-manha-lg.webp",
-    alt: "Café da manhã incluso",
-  },
-  {
-    id: 11,
-    category: Category.COMMON,
-    url: "/images/optimized/galeria/Elevador-lg.webp",
-    alt: "Elevador do hotel",
-  },
-  {
     id: 12,
-    category: Category.COMMON,
-    url: "/images/optimized/galeria/Escadas-lg.webp",
-    alt: "Escadas internas do hotel",
+    category: Category.LOUNGE,
+    url: "/images/optimized/galeria/area-estar-entrada-lg.webp",
+    alt: "Entrada da área de estar",
   },
+
+  // ── Quarto bloco ──
   {
     id: 13,
-    category: Category.COMMON,
-    url: "/images/optimized/galeria/sinalizacao-quartos-lg.webp",
-    alt: "Sinalização dos quartos",
+    category: Category.AERIAL,
+    url: "/images/optimized/galeria/drone-vista-frontal-proxima-lg.webp",
+    alt: "Vista aérea frontal próxima do hotel",
   },
   {
     id: 14,
@@ -87,15 +94,91 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     id: 15,
+    category: Category.GASTRONOMY,
+    url: "/images/optimized/galeria/cafe-da-manha-lg.webp",
+    alt: "Café da manhã incluso",
+  },
+  {
+    id: 16,
+    category: Category.LOUNGE,
+    url: "/images/optimized/galeria/area-estar-recepcao-lg.webp",
+    alt: "Recepção e área de estar",
+  },
+
+  // ── Restantes de cada categoria ──
+  {
+    id: 17,
+    category: Category.AERIAL,
+    url: "/images/optimized/galeria/drone-vista-entrada-lg.webp",
+    alt: "Vista aérea da entrada do hotel",
+  },
+  {
+    id: 18,
     category: Category.SUITES,
     url: "/images/optimized/galeria/tvs-em-todos-os-quartos-lg.webp",
     alt: "TVs Smart em todos os quartos",
   },
   {
-    id: 16,
+    id: 19,
     category: Category.GASTRONOMY,
     url: "/images/optimized/galeria/sobremesa-personalizada-lg.webp",
     alt: "Sobremesa personalizada",
+  },
+  {
+    id: 20,
+    category: Category.LOUNGE,
+    url: "/images/optimized/galeria/area-estar-detalhes-lg.webp",
+    alt: "Detalhes da área de estar",
+  },
+  {
+    id: 21,
+    category: Category.SUITES,
+    url: "/images/optimized/galeria/banheiro-lg.webp",
+    alt: "Banheiro dos apartamentos",
+  },
+  {
+    id: 22,
+    category: Category.LOUNGE,
+    url: "/images/optimized/galeria/area-estar-lg.webp",
+    alt: "Área de estar do hotel",
+  },
+
+  // ── Infraestrutura (aparece ao carregar mais) ──
+  {
+    id: 23,
+    category: Category.COMMON,
+    url: "/images/optimized/galeria/infra-carregador-veicular-lg.webp",
+    alt: "Carregador veicular nas áreas comuns",
+  },
+  {
+    id: 24,
+    category: Category.COMMON,
+    url: "/images/optimized/galeria/infra-Elevador-lg.webp",
+    alt: "Elevador do hotel",
+  },
+  {
+    id: 25,
+    category: Category.COMMON,
+    url: "/images/optimized/galeria/infra-Escadas-lg.webp",
+    alt: "Escadas internas do hotel",
+  },
+  {
+    id: 26,
+    category: Category.COMMON,
+    url: "/images/optimized/galeria/infra-sinalizacao-quartos-lg.webp",
+    alt: "Sinalização dos quartos",
+  },
+  {
+    id: 27,
+    category: Category.COMMON,
+    url: "/images/optimized/galeria/infra-corredores-lg.webp",
+    alt: "Corredores do hotel",
+  },
+  {
+    id: 28,
+    category: Category.COMMON,
+    url: "/images/optimized/galeria/infra-estacionamento-coberto-lg.webp",
+    alt: "Estacionamento coberto",
   },
 ];
 
@@ -128,7 +211,16 @@ export const ROOMS: Room[] = [
     description:
       "Apartamento aconchegante e funcional, ideal para viajantes solo que buscam conforto e praticidade no coração de Tauá.",
     image:
-      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&q=80&w=2070",
+      "/images/optimized/apartamentos/simples/01-Visão-do-Quarto-lg.webp",
+    images: [
+      "/images/optimized/apartamentos/simples/01-Visão-do-Quarto-lg.webp",
+      "/images/optimized/apartamentos/simples/02-Cama-e-Frigobar-lg.webp",
+      "/images/optimized/apartamentos/simples/03-Visão-inversa-do-quarto-lg.webp",
+      "/images/optimized/apartamentos/simples/04-Visão-da-Cama-lg.webp",
+      "/images/optimized/apartamentos/simples/05-Tv-e-Rack-lg.webp",
+      "/images/optimized/apartamentos/simples/06-Banheiro-lg.webp",
+      "/images/optimized/apartamentos/simples/07-Entrada-lg.webp",
+    ],
     area: "14,68 m²",
     capacity: "01 pessoa",
     hasBalcony: true,
