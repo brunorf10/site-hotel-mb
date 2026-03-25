@@ -5,8 +5,8 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 1,
     category: Category.AERIAL,
-    url: "/images/optimized/galeria/drone-vista-frontal-ampla-lg.webp",
-    alt: "Vista aérea frontal ampla do hotel",
+    url: "/images/optimized/galeria/drone-vista-frontal-proxima-lg.webp",
+    alt: "Vista aérea frontal próxima do hotel",
   },
   {
     id: 2,
@@ -83,8 +83,8 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 13,
     category: Category.AERIAL,
-    url: "/images/optimized/galeria/drone-vista-frontal-proxima-lg.webp",
-    alt: "Vista aérea frontal próxima do hotel",
+    url: "/images/optimized/galeria/drone-vista-frontal-ampla-lg.webp",
+    alt: "Vista aérea frontal ampla do hotel",
   },
   {
     id: 14,
