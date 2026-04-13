@@ -7,6 +7,7 @@ import { EventsSection } from "./components/EventsSection";
 import { ContactSection } from "./components/ContactSection";
 import { Footer } from "./components/Footer";
 import { BookingModal } from "./components/BookingModal";
+import { WhatsAppButton } from "./components/WhatsAppButton";
 
 import { Toaster } from "sonner";
 
@@ -60,6 +61,7 @@ const App: React.FC = () => {
         preSelected={bookingState.preSelected}
       />
       <Toaster position="top-right" richColors closeButton />
+      <WhatsAppButton />
     </div>
   );
 };
