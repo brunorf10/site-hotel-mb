@@ -1,9 +1,10 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { BookingType } from '../App';
 
 interface EventsSectionProps {
-  onOpenBooking: () => void;
+  onOpenBooking: (type: BookingType, preSelected?: string) => void;
 }
 
 export const EventsSection: React.FC<EventsSectionProps> = ({ onOpenBooking }) => {
@@ -38,10 +39,10 @@ export const EventsSection: React.FC<EventsSectionProps> = ({ onOpenBooking }) =
           >
             Instalações climatizadas e serviços personalizados para reuniões corporativas, conferências e celebrações inesquecíveis.
           </motion.p>
-          <motion.button 
+          <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={onOpenBooking}
+            onClick={() => onOpenBooking("evento")}
             className="bg-accent text-primary px-6 sm:px-10 py-3 sm:py-4 rounded-full font-bold text-sm sm:text-lg hover:bg-white transition-all shadow-xl"
           >
             Solicite uma Proposta
@@ -53,31 +54,34 @@ export const EventsSection: React.FC<EventsSectionProps> = ({ onOpenBooking }) =
         {[
           {
             title: "Auditório",
+            value: "Auditório (170 pessoas)",
             cap: "170 pessoas",
             desc: "Climatizado, serviço de som e imagem, toaletes masculino e feminino",
             img: "/images/optimized/eventos/auditorio-01-lg.webp"
           },
           {
             title: "Sala de Reuniões",
+            value: "Sala de Reuniões (20 pessoas)",
             cap: "20 pessoas",
             desc: "Climatizada, móveis projetados, serviço de som e imagem",
             img: "/images/optimized/eventos/sala-reunioes-01-lg.webp"
           },
           {
             title: "Salão de Eventos",
+            value: "Salão de Eventos (Restaurante)",
             cap: "Sob consulta",
             desc: "Localizado no Restaurante Maria Bastos — ideal para aniversários, casamentos e confraternizações com buffet customizado incluso",
             img: "/images/optimized/eventos/ambiente-restaurante-01-lg.webp"
           }
         ].map((item, idx) => (
-          <motion.div 
+          <motion.div
             key={idx}
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: idx * 0.2, duration: 0.5 }}
             viewport={{ once: true }}
             whileHover={{ y: -10 }}
-            onClick={onOpenBooking}
+            onClick={() => onOpenBooking("evento", item.value)}
             className="group relative h-56 sm:h-72 md:h-96 rounded-2xl overflow-hidden cursor-pointer shadow-lg"
           >
             <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />

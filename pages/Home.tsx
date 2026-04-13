@@ -4,9 +4,10 @@ import { Gallery } from "../components/Gallery";
 import { RoomsSection } from "../components/RoomsSection";
 import { EventsSection } from "../components/EventsSection";
 import { ContactSection } from "../components/ContactSection";
+import { BookingType } from "../App";
 
 interface HomeProps {
-  onOpenBooking: () => void;
+  onOpenBooking: (type: BookingType, preSelected?: string) => void;
 }
 
 export const Home: React.FC<HomeProps> = ({ onOpenBooking }) => {

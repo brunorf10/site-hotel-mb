@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ROOMS } from "../constants";
+import { BookingType } from "../App";
 
 interface RoomsSectionProps {
-  onOpenBooking: () => void;
+  onOpenBooking: (type: BookingType, preSelected: string) => void;
 }
 
 export const RoomsSection: React.FC<RoomsSectionProps> = ({
@@ -186,7 +187,7 @@ export const RoomsSection: React.FC<RoomsSectionProps> = ({
             </div>
 
             <button
-              onClick={onOpenBooking}
+              onClick={() => onOpenBooking("quarto", `Apt. ${selectedRoom.name}`)}
               className="w-full bg-primary text-white py-4 rounded-xl font-bold hover:bg-opacity-90 transition-all shadow-lg shadow-primary/20 active:scale-95"
             >
               Verificar Disponibilidade
